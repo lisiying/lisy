@@ -5,6 +5,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.lisy.common.PrintUtils;
 
+/**
+ * ReentrantLock的基础用法测试
+ * @author lisy
+ *
+ */
 public class LockAndTryLock {
 	//Lock用法：全局变量Lock+一段用lock/unLock包围起来的同步代码
 	//Lock原理（猜测）:在Lock中存放一个变量，记录currThread的“锁值”，持有/重复持有锁，则+1;否则-1;

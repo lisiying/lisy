@@ -6,7 +6,8 @@ import org.lisy.common.PrintUtils;
 
 /** 
  * 同步块与同步方法是否同步
- * [实验结果]：不同步 
+ * [实验结果]：同步（当同一对象监视器时）
+ * @see SyncThisAndSyncObjIsTheSame
  * 
  * @author Lisy
  * @date 2017年12月11日
