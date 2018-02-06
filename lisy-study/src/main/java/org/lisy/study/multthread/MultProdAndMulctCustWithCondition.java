@@ -45,7 +45,7 @@ public class MultProdAndMulctCustWithCondition {
 		public void publish() throws InterruptedException {
 			lock.lock();
 			
-			if(this.size()!=0) {
+			if(!this.isEmpty()) {
 				PrintUtils.println("线程[{}]等待取消息,数据长度[{}],消费队列[{}]",Thread.currentThread().getName(),this.size(),lock.getWaitQueueLength(conC));
 				conC.signalAll();
 				conP.await();
@@ -62,7 +62,7 @@ public class MultProdAndMulctCustWithCondition {
 		public void consume() throws InterruptedException {
 			lock.lock();
 			
-			if(this.size()==0) {
+			if(this.isEmpty()) {
 				PrintUtils.println("线程[{}]等待投放消息,数据长度[{}],生产队列[{}]",Thread.currentThread().getName(),this.size(),lock.getWaitQueueLength(conP));
 				conP.signalAll();
 				conC.await();
