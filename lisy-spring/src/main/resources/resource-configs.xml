@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Resource用例 -->
+	<bean id="resourceBean" class="org.lisy.spring.ResourceBean">
+		<property name="resource" value="file:/Users/sasori/Downloads/#{new java.text.SimpleDateFormat('yyyyMMdd').format(new java.util.Date())}/FILE-#{new java.text.SimpleDateFormat('yyyyMMdd').format(new java.util.Date())}.data"/>
+	</bean>
+	
+	<!-- FactoryBean用例 -->
+	<bean id="resourceFactory" class="org.lisy.spring.MyFactoryBean"/>
+	
+</beans>

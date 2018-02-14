@@ -9,10 +9,16 @@
 	<modules>
 		<module>lisy-study</module>
 		<module>lisy-common</module>
+		<module>lisy-spring</module>
 	</modules>
+	
+	<!-- 对一些包的版本统一管理 -->
+	<properties>
+		<spring.version>4.2.7.RELEASE</spring.version>
+	</properties>
 
 	<dependencyManagement>
-	<!-- 本项目依赖-为了统一配置内部模块的版本 -->
+		<!-- 本项目依赖-为了统一配置内部模块的版本 -->
 		<dependencies>
 			<dependency>
 				<groupId>org.lisy</groupId>
@@ -23,6 +29,39 @@
 				<groupId>org.lisy</groupId>
 				<artifactId>lisy-study</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.lisy</groupId>
+				<artifactId>lisy-spring</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Spring依赖 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- 单元测试相关 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<scope>test</scope>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<scope>test</scope>
+				<version>4.12</version>
+			</dependency>
+			
+			<!-- Spring相关 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
