@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<!-- <context:component-scan base-package="cn.sunline.**">
+	</context:component-scan> -->
+	<!-- PostBean用例，不使用FactoryBean -->
+	<bean id="staticBean" class="org.lisy.spring.PostBeforeAndAfterBean"/>
+	<bean id="postBeanRegPostProcess" class="org.lisy.spring.PostBeanBDRegPostProcess"/>
+	<!-- <bean id="postBean" class="org.lisy.spring.PostBeforeAndAfterFactoryBean" /> -->
+</beans>
