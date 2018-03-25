@@ -1,4 +1,4 @@
-package org.lisy.study.multthread;
+package org.lisy.study.concurrent;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

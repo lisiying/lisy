@@ -9,5 +9,6 @@
 	<!-- PostBean用例，不使用FactoryBean -->
 	<bean id="staticBean" class="org.lisy.spring.PostBeforeAndAfterBean"/>
 	<bean id="postBeanRegPostProcess" class="org.lisy.spring.PostBeanBDRegPostProcess"/>
+	<bean id="myBeanPostProcessor" class="org.lisy.spring.MyBeanPostProcessor"/>
 	<!-- <bean id="postBean" class="org.lisy.spring.PostBeforeAndAfterFactoryBean" /> -->
 </beans>

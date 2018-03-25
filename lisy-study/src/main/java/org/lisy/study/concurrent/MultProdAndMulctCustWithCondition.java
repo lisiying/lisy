@@ -1,4 +1,4 @@
-package org.lisy.study.multthread;
+package org.lisy.study.concurrent;
 
 import java.util.ArrayList;
 import java.util.Random;

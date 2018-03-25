@@ -1,4 +1,4 @@
-package org.lisy.study.multthread;
+package org.lisy.study.concurrent;
 
 /**
  * 本实验验证threadLocal的作用，与基本属性

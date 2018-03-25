@@ -1,4 +1,4 @@
-package org.lisy.study.multthread;
+package org.lisy.study.concurrent;
 
 /**
  * 本实验证明，后台进程在前台进程结束后会立即结束；后台进程join可能不会被执行
