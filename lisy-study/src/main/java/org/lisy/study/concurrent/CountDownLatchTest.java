@@ -6,6 +6,7 @@ import org.lisy.common.PrintUtils;
 
 /**
  * 计数闭锁用例
+ * 最重要的方法：countDown()、await()
  * CountDownLatch特性：若其count减到0，他会notifyAll那些await的线程
  * @author lisy
  *
