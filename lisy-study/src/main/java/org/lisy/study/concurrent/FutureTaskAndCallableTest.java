@@ -16,6 +16,7 @@ import org.lisy.common.PrintUtils;
  * 2.FutureTask的get方法是阻塞方法(也就是说，调用了get的话，会阻塞直到callable拿到结果),非常重要
  * 3.FutureTask(Runnable,V)底层是用Excutor实现的
  * 4.(最重要)业务代码应该是写在Callable.call里的(如果构造方法是Callable的话)
+ * 5.不要用FutureTask的run（好像不会阻塞，会直接调用call）
  * @author lisy
  *
  */
