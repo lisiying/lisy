@@ -13,6 +13,7 @@
 	</modules>
 	
 	<!-- 对一些包的版本统一管理 -->
+	<!-- Warn!!!本pom文件本着最小化依赖原则，坚决移除多余依赖 -->
 	<properties>
 		<spring.version>4.2.7.RELEASE</spring.version>
 	</properties>
@@ -36,13 +37,6 @@
 				<version>${project.version}</version>
 			</dependency>
 
-			<!-- Spring依赖 -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-
 			<!-- 单元测试相关 -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -57,10 +51,22 @@
 				<version>4.12</version>
 			</dependency>
 			
-			<!-- Spring相关 -->
+			<!-- Spring核心组件 -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- Spring AOP -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
 				<version>${spring.version}</version>
 			</dependency>
 		</dependencies>
